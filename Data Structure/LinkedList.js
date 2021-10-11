@@ -31,7 +31,7 @@ class LinkedList {
           this.head = null;
           console.log("List is Empty!!");
         } else {
-          while (cur.data !== data && cur !== null) {
+          while (cur.data !== data && cur.next !== null) {
             prev = cur;
             cur = cur.next;
           }
@@ -45,6 +45,8 @@ class LinkedList {
                 this.tail = prev;
               }
             }
+          } else {
+            console.log(data + " not found!!");
           }
         }
       }
@@ -85,9 +87,9 @@ module.exports = LinkedList;
 
 //---------------------------------- Test ----------------------------------
 
-// let l = new LinkedList(10, 20);
-// l.delete(20);
-// l.add(20, 30, 40, 50, 60);
-// l.delete(10, 60, 40);
-// l.reverse();
-// console.log(l.getList());
+let l = new LinkedList(10, 20);
+l.delete(20);
+l.add(20, 30, 40, 50, 60);
+l.delete(10, 60, 40, 100);
+l.reverse();
+console.log(l.getList());
