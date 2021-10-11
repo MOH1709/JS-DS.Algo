@@ -1,10 +1,12 @@
 class LinkedList {
   constructor(...values) {
+    // variable's which can't be accessed by user
     function node(data) {
       this.data = data;
       this.next = null;
     }
 
+    // Object properties
     this.head = null;
     this.tail = null;
 

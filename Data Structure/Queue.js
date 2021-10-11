@@ -1,10 +1,13 @@
+// Importing Linked List from current folder using node import syntax
 const LinkedList = require("./LinkedList");
 
+//---------------------------------- Queue ----------------------------------
 class Queue {
   constructor(...values) {
     let front = null,
       rear = null;
 
+    // initializing linked list
     const q = new LinkedList(...values);
 
     this.enqueue = (...val) => {
