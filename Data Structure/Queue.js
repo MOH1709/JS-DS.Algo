@@ -16,16 +16,15 @@ class Queue {
       rear = q.tail;
     };
 
-    this.dequeue = (count = 1) => {
-      for (let i = 0; i < count; i++) {
-        if (front === null) {
-          console.log("Queue is empty!!");
-          break;
-        } else {
-          front = front.next;
-        }
+    this.dequeue = () => {
+      let shift = front?.data;
+      if (front === null) {
+        console.log("Queue is empty!!");
+      } else {
+        front = front.next;
       }
       q.head = front;
+      return shift;
     };
 
     this.getQueue = () => {
@@ -40,6 +39,6 @@ module.exports = Queue;
 
 // let q = new Queue(0, 1);
 // q.enqueue(10, 20, 30, 40, 50, 60);
-// q.dequeue(2);
+// q.dequeue();
 // q.enqueue(70);
 // console.log(q.getQueue());

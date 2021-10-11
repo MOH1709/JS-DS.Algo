@@ -87,9 +87,9 @@ module.exports = LinkedList;
 
 //---------------------------------- Test ----------------------------------
 
-let l = new LinkedList(10, 20);
-l.delete(20);
-l.add(20, 30, 40, 50, 60);
-l.delete(10, 60, 40, 100);
-l.reverse();
-console.log(l.getList());
+// let l = new LinkedList(10, 20);
+// l.delete(20);
+// l.add(20, 30, 40, 50, 60);
+// l.delete(10, 60, 40, 100);
+// l.reverse();
+// console.log(l.getList());
