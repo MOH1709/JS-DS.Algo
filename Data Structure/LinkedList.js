@@ -22,20 +22,31 @@ class LinkedList {
       }
     })(...values);
 
-    this.delete = () => {
-      let cur = this.head,
-        prev = this.head;
+    this.delete = (...values) => {
+      for (let data of values) {
+        var cur = this.head,
+          prev = null;
 
-      if (this.head === null || this.head.next === null) {
-        this.head = null;
-        console.log("List is Empty!!");
-      } else {
-        while (cur.next) {
-          prev = cur;
-          cur = cur.next;
+        if (this.head === null || this.head.next === null) {
+          this.head = null;
+          console.log("List is Empty!!");
+        } else {
+          while (cur.data !== data && cur !== null) {
+            prev = cur;
+            cur = cur.next;
+          }
+          // operation after finding value in linked list
+          if (data === cur.data) {
+            if (cur === this.head) {
+              this.head = cur.next;
+            } else {
+              prev.next = cur.next;
+              if (cur === this.tail) {
+                this.tail = prev;
+              }
+            }
+          }
         }
-        prev.next = null;
-        this.tail = prev;
       }
     };
 
@@ -75,8 +86,8 @@ module.exports = LinkedList;
 //---------------------------------- Test ----------------------------------
 
 // let l = new LinkedList(10, 20);
-// l.delete();
+// l.delete(20);
 // l.add(20, 30, 40, 50, 60);
-// l.delete();
+// l.delete(10, 60, 40);
 // l.reverse();
 // console.log(l.getList());
