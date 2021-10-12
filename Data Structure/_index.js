@@ -6,11 +6,16 @@
  * Heap sort => instead of deleting swapping the first with last and go on. until the
                 array sorts;  
  * Find loop in list => send 2 pointers with different speed, they will meet at some time😉
+ * Types of tree => full (2 or null), complete (All the leaf elements must lean towards the left), 
+                    perfect(complete && 2) && balanced; 
+ * Avl => searching is faster (strictly height balanced)
+ * red-black => insertion and deletion is faster 
  * 
  * 
- *  
+ * 
  */
 
 // prims algo
 // Huffman Code
 // fibonacci heap
+// Compilers use a syntax tree to validate the syntax of every program you write.
