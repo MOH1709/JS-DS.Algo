@@ -8,7 +8,7 @@
  * Find loop in list => send 2 pointers with different speed, they will meet at some time😉
  * Types of tree => full (2 or null), complete (All the leaf elements must lean towards the left), 
                     perfect(complete && 2) && balanced; 
- * Avl => searching is faster (strictly height balanced)
+ * Avl => searching is faster (strictly height balanced).
  * red-black => insertion and deletion is faster 
  * 
  * 
