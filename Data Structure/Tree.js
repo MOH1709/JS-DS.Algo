@@ -46,24 +46,6 @@ class Tree {
       }
     };
 
-    this.delete = (...values) => {
-      if (root === null) {
-        console.log("Tree is Empty");
-        return;
-      }
-
-      for (let data of values) {
-        while (cur && cur.data !== data) {
-          var prev = cur;
-          cur = cur[cur.data < data ? "right" : "left"];
-        }
-        if (cur) {
-        } else {
-          console.log(data + " not found!!");
-        }
-      }
-    };
-
     this.inOrder = (cur = root) => {
       if (cur.left) {
         this.inOrder(cur.left);
@@ -94,6 +76,4 @@ let tree = new Tree();
 tree.insert(30, 20, 40, 10, 15, 35, 50);
 // tree.rInsert(11);
 // tree.rInsert(1);
-
-console.log(tree.isFullTree());
 // tree.inOrder();
