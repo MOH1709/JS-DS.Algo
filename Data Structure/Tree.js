@@ -72,8 +72,8 @@ class Tree {
 }
 
 //---------------------------------- Test ----------------------------------
-let tree = new Tree();
-tree.insert(30, 20, 40, 10, 15, 35, 50);
+// let tree = new Tree();
+// tree.insert(30, 20, 40, 10, 15, 35, 50);
 // tree.rInsert(11);
 // tree.rInsert(1);
 // tree.inOrder();
