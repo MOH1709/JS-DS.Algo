@@ -1,21 +1,23 @@
 // Importing Linked List from current folder using node import syntax
 const LinkedList = require("./LinkedList");
 
-//---------------------------------- Queue ----------------------------------
+//------------------------------- Queue using linked list -------------------------------
 class Queue {
   constructor(...values) {
     let front = null,
       rear = null;
 
     // initializing linked list
-    const q = new LinkedList(...values);
+    const list = new LinkedList(...values);
 
+    //--------------------------------------------------------------------
     this.enqueue = (...val) => {
-      q.add(...val);
-      front = q.head;
-      rear = q.tail;
+      list.add(...val);
+      front = list.head;
+      rear = list.tail;
     };
 
+    //--------------------------------------------------------------------
     this.dequeue = () => {
       let shift = front?.data;
       if (front === null) {
@@ -23,12 +25,19 @@ class Queue {
       } else {
         front = front.next;
       }
-      q.head = front;
+      list.head = front;
       return shift;
     };
 
+    //--------------------------------------------------------------------
+    this.print = () => {
+      list.print();
+    };
+
+    //--------------------------------------------------------------------
     this.getQueue = () => {
-      return q.getList(front);
+      // returns a array of your queue
+      return list.getList(front);
     };
   }
 }
@@ -41,4 +50,5 @@ module.exports = Queue;
 // q.enqueue(10, 20, 30, 40, 50, 60);
 // q.dequeue();
 // q.enqueue(70);
+// q.print();
 // console.log(q.getQueue());

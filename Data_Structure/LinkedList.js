@@ -10,6 +10,7 @@ class LinkedList {
     this.head = null;
     this.tail = null;
 
+    //--------------------------------------------------------------------
     (this.add = (...val) => {
       for (let data of val) {
         if (this.head === null) {
@@ -22,6 +23,7 @@ class LinkedList {
       }
     })(...values);
 
+    //--------------------------------------------------------------------
     this.delete = (...values) => {
       for (let data of values) {
         var cur = this.head,
@@ -31,16 +33,18 @@ class LinkedList {
           this.head = null;
           console.log("List is Empty!!");
         } else {
-          while (cur.data !== data && cur.next !== null) {
+          while (cur.data !== data && cur.next) {
             prev = cur;
             cur = cur.next;
           }
           // operation after finding value in linked list
           if (data === cur.data) {
+            //updating head
             if (cur === this.head) {
               this.head = cur.next;
             } else {
               prev.next = cur.next;
+              // updating tail
               if (cur === this.tail) {
                 this.tail = prev;
               }
@@ -52,6 +56,7 @@ class LinkedList {
       }
     };
 
+    //--------------------------------------------------------------------
     this.reverse = () => {
       let nxt = this.head,
         prev = null;
@@ -72,9 +77,17 @@ class LinkedList {
       }
     };
 
-    this.getList = (start = this.head) => {
+    //--------------------------------------------------------------------
+    this.print = () => {
+      for (let i = this.head; i; i = i.next) {
+        console.log(i.data);
+      }
+    };
+
+    //------------------------------- Getting array of list -------------------------------
+    this.getList = () => {
       let arr = [];
-      for (let i = start; i; i = i.next) {
+      for (let i = this.head; i; i = i.next) {
         arr.push(i.data);
       }
 

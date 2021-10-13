@@ -25,6 +25,7 @@ class Tree {
       }
     };
 
+    // Insert data in tree recursively
     this.rInsert = (data, cur = root) => {
       if (root === null) {
         root = new node(data);
@@ -33,39 +34,41 @@ class Tree {
 
       if (cur.data < data) {
         if (cur.right) {
-          this.rInsert(data, cur.right);
+          this.rInsert(data, cur.right); // recall
         } else {
           cur.right = new node(data);
         }
       } else {
         if (cur.left) {
-          this.rInsert(data, cur.left);
+          this.rInsert(data, cur.left); // recall
         } else {
           cur.left = new node(data);
         }
       }
     };
 
+    // In-order traversal
     this.inOrder = (cur = root) => {
       if (cur.left) {
-        this.inOrder(cur.left);
+        this.inOrder(cur.left); // recall
       }
 
       console.log(cur.data);
 
       if (cur.right) {
-        this.inOrder(cur.right);
+        this.inOrder(cur.right); // recall
       }
     };
 
+    // finding height of tree
     this.maxDepth = (cur = root) => {
       if (cur === null) {
         return 0;
       }
 
       return Math.max(
-        this.maxDepth(cur.left) + 1,
-        this.maxDepth(cur.right) + 1
+        this.maxDepth(cur.left) + 1, // recall
+        this.maxDepth(cur.right) + 1 // recall
       );
     };
   }
