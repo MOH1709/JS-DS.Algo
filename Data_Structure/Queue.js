@@ -8,14 +8,14 @@ class Queue {
       rear = null;
 
     // initializing linked list
-    const list = new LinkedList(...values);
+    const list = new LinkedList();
 
     //--------------------------------------------------------------------
-    this.enqueue = (...val) => {
+    (this.enqueue = (...val) => {
       list.add(...val);
       front = list.head;
       rear = list.tail;
-    };
+    })(...values);
 
     //--------------------------------------------------------------------
     this.dequeue = () => {
