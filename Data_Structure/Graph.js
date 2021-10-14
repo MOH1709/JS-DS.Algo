@@ -36,6 +36,25 @@ class Graph {
       }
     };
 
+    // Depth First Search
+    this.DFS = (from) => {
+      let isVisited = new Map();
+      let stack = [from];
+
+      isVisited.set(from);
+      while (stack.length) {
+        var cur = map.get(from).find((data) => !isVisited.has(data));
+
+        if (cur === undefined) {
+          console.log(stack.pop());
+        } else {
+          stack.push(cur);
+          isVisited.set(cur);
+          from = cur;
+        }
+      }
+    };
+
     //print graph with all edge connections
     this.print = () => {
       let keysArr = map.keys();
@@ -51,5 +70,5 @@ class Graph {
 // let g1 = new Graph();
 // g1.addEdge("a", [1, 3, "b", "s"]);
 // g1.addEdge("b", [1, 3, "s", "b"]);
-// g1.print();
-// g1.BFS(3);
+// g1.DFS(1);
+// g1.BFS(1);
