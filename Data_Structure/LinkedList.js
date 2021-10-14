@@ -31,7 +31,6 @@ class LinkedList {
 
         if (this.head === null || this.head.next === null) {
           this.head = null;
-          console.log("List is Empty!!");
         } else {
           while (cur.data !== data && cur.next) {
             prev = cur;
@@ -61,9 +60,7 @@ class LinkedList {
       let nxt = this.head,
         prev = null;
 
-      if (this.head === null) {
-        console.log("List is Empty!!");
-      } else {
+      if (this.head) {
         this.tail = this.head;
 
         while (nxt) {

@@ -20,9 +20,7 @@ class Queue {
     //--------------------------------------------------------------------
     this.dequeue = () => {
       let shift = front?.data;
-      if (front === null) {
-        console.log("Queue is empty!!");
-      } else {
+      if (front) {
         front = front.next;
       }
       list.head = front;

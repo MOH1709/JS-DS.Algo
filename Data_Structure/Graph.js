@@ -29,8 +29,10 @@ class Graph {
           if (isVisited.has(node) === false) {
             isVisited.set(node);
             q.enqueue(node);
-          } else console.log(q.dequeue());
+          }
         }
+        from = q.dequeue();
+        console.log(from);
       }
     };
 
@@ -49,5 +51,5 @@ class Graph {
 let g1 = new Graph();
 g1.addEdge("a", [1, 3, "b", "s"]);
 g1.addEdge("b", [1, 3, "s", "b"]);
-g1.print();
-g1.BFS("a");
+// g1.print();
+g1.BFS(3);
