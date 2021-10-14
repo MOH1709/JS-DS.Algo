@@ -48,8 +48,8 @@ class Graph {
 }
 
 //---------------------------------- Test ----------------------------------
-let g1 = new Graph();
-g1.addEdge("a", [1, 3, "b", "s"]);
-g1.addEdge("b", [1, 3, "s", "b"]);
+// let g1 = new Graph();
+// g1.addEdge("a", [1, 3, "b", "s"]);
+// g1.addEdge("b", [1, 3, "s", "b"]);
 // g1.print();
-g1.BFS(3);
+// g1.BFS(3);
