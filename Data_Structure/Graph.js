@@ -66,6 +66,8 @@ class Graph {
   }
 }
 
+module.exports = Graph;
+
 //---------------------------------- Test ----------------------------------
 // let g1 = new Graph();
 // g1.addEdge("a", [1, 3, "b", "s"]);
