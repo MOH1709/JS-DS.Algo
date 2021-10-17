@@ -1,24 +1,37 @@
 function mergeSort(arr) {
-  if (arr.length === 1) {
-    return arr;
-  }
-  let mid = Math.floor(arr.length / 2);
+  (function main(arr = [], first = 0, last = arr.length - 1) {
+    if (first < last) {
+      let mid = Math.floor((first + last) / 2);
 
-  let right = arr.splice(mid, arr.length);
-  return merge(mergeSort(arr), mergeSort(right));
+      main(arr, first, mid);
+      main(arr, mid + 1, last);
+      merge(arr, first, mid, last);
+    }
+  })(arr);
 
-  function merge(left, right) {
-    let arr = [];
+  function merge(arr, start, mid, end) {
+    let i = start,
+      j = mid + 1,
+      res = [];
 
-    // Break out of loop if any one of the array gets empty
-    while (left.length && right.length) {
-      arr.push(left[0] < right[0] ? left.shift() : right.shift());
+    while (i <= mid && j <= end) {
+      res.push(arr[i] < arr[j] ? arr[i++] : arr[j++]);
     }
 
-    return [...arr, ...left, ...right];
+    while (i <= mid) {
+      res.push(arr[i++]);
+    }
+
+    while (j <= end) {
+      res.push(arr[j++]);
+    }
+
+    for (let i = start, j = 0; i <= end; i++, j++) {
+      arr[i] = res[j];
+    }
   }
 }
+let arr = [3, 4, 9, 5, 2, 3, 2, 1, 7, 6, 8];
 
-let arr = [2, 4, 8, 6, 1, 3, 5, 7, 9];
-
-console.log(mergeSort(arr));
+mergeSort(arr);
+console.log(arr);
