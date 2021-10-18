@@ -5,6 +5,7 @@
 
 let arr = [20, 10, 50, 60, 40, 30, 80, 80, 70, 1];
 
+// Loop to sort Array
 for (let i = arr.length - 1; i >= 0; i--) {
   for (var j = 0; j < i; j++) {
     if (arr[j] > arr[j + 1]) {
