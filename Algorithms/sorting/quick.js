@@ -1,4 +1,5 @@
 function quickSort(arr = []) {
+  // Main function which sort's array
   (function main(arr = [], first = 0, last = arr.length - 1) {
     // base case
     if (first >= last) return;
@@ -9,9 +10,12 @@ function quickSort(arr = []) {
     main(arr, pivot + 1, last);
   })(arr);
 
+  //--------------------------------------------------------------------
   function getPivot(arr, start, end) {
+    // assuming pivot position as a start of array
     let pivot = start;
 
+    // Loop for obtaining the position of pivot element in array
     while (start < end) {
       while (arr[start] <= arr[pivot]) start++;
       while (arr[end] > arr[pivot]) end--;
@@ -23,6 +27,7 @@ function quickSort(arr = []) {
 
     [arr[pivot], arr[end]] = [arr[end], arr[pivot]];
 
+    // returning pivot position
     return end;
   }
 }
