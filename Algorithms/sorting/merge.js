@@ -1,3 +1,5 @@
+let arr = [3, 4, 9, 5, 2, 3, 2, 1, 7, 6, 8];
+
 function mergeSort(arr) {
   // Main function which sort's array
   (function main(arr = [], first = 0, last = arr.length - 1) {
@@ -35,7 +37,6 @@ function mergeSort(arr) {
     }
   }
 }
-let arr = [3, 4, 9, 5, 2, 3, 2, 1, 7, 6, 8];
 
 mergeSort(arr);
 console.log(arr);
