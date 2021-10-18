@@ -19,6 +19,7 @@ for (let i = 1; i < countArr.length; i++) {
   countArr[i] += countArr[i - 1];
 }
 
+// getting sorted array
 let res = [];
 arr.forEach((data) => {
   let i = countArr[data] - 1;
