@@ -1,33 +1,37 @@
 function mergeSort(arr) {
+  // Main function which sort's array
   (function main(arr = [], first = 0, last = arr.length - 1) {
-    if (first < last) {
-      let mid = Math.floor((first + last) / 2);
+    if (first >= last) return;
 
-      main(arr, first, mid);
-      main(arr, mid + 1, last);
-      merge(arr, first, mid, last);
-    }
+    let mid = Math.floor((first + last) / 2);
+
+    main(arr, first, mid);
+    main(arr, mid + 1, last);
+    merge(arr, first, mid, last);
   })(arr);
 
+  // Function to merge the two sorted array
   function merge(arr, start, mid, end) {
-    let i = start,
-      j = mid + 1,
+    let left = start,
+      right = mid + 1,
       res = [];
 
-    while (i <= mid && j <= end) {
-      res.push(arr[i] < arr[j] ? arr[i++] : arr[j++]);
+    // loop to obtain merged sorted array
+    while (left <= mid && right <= end) {
+      res.push(arr[left] < arr[right] ? arr[left++] : arr[right++]);
     }
 
-    while (i <= mid) {
-      res.push(arr[i++]);
+    while (left <= mid) {
+      res.push(arr[left++]);
     }
 
-    while (j <= end) {
-      res.push(arr[j++]);
+    while (right <= end) {
+      res.push(arr[right++]);
     }
 
-    for (let i = start, j = 0; i <= end; i++, j++) {
-      arr[i] = res[j];
+    // loop to copy the element of sorted array in original array
+    for (let i = start, j = 0; i <= end; ) {
+      arr[i++] = res[j++];
     }
   }
 }
