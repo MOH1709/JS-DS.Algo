@@ -1,3 +1,5 @@
+let arr = [3, 4, 9, 5, 2, 3, 2, 1, 7, 6, 8];
+
 function quickSort(arr = []) {
   // Main function which sort's array
   (function main(arr = [], first = 0, last = arr.length - 1) {
@@ -31,8 +33,6 @@ function quickSort(arr = []) {
     return end;
   }
 }
-
-let arr = [3, 4, 9, 5, 2, 3, 2, 1, 7, 6, 8];
 
 quickSort(arr);
 console.log(arr);
