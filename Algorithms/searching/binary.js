@@ -1,3 +1,5 @@
+// used when array is sorted
+
 let arr = [10, 20, 30, 40, 50, 60, 70, 80];
 
 function binary(arr = [], target) {
