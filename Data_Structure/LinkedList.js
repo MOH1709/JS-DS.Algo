@@ -93,8 +93,7 @@ class LinkedList {
   }
 }
 
-module.exports = LinkedList;
-
+export default LinkedList;
 //---------------------------------- Test ----------------------------------
 
 // let l = new LinkedList(10, 20);

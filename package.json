@@ -1,0 +1,20 @@
+{
+  "name": "js-ds.algo",
+  "version": "1.0.0",
+  "description": "Data Structure && Algorithmd in javascript Language",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MOH1709/JS-DS.Algo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MOH1709/JS-DS.Algo/issues"
+  },
+  "homepage": "https://github.com/MOH1709/JS-DS.Algo#readme"
+}

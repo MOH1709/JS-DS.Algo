@@ -1,4 +1,4 @@
-const Queue = require("./Queue");
+import Queue from "./Queue.js";
 
 class Graph {
   constructor() {
@@ -66,7 +66,7 @@ class Graph {
   }
 }
 
-module.exports = Graph;
+export default Graph;
 
 //---------------------------------- Test ----------------------------------
 // let g1 = new Graph();

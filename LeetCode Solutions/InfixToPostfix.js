@@ -62,4 +62,4 @@ function getPrecedence(symbol) {
   return precedence;
 }
 
-module.exports = infixToPostfix;
+export default infixToPostfix;

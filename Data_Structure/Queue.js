@@ -1,5 +1,5 @@
 // Importing Linked List from current folder using node import syntax
-const LinkedList = require("./LinkedList");
+import LinkedList from "./LinkedList.js";
 
 //------------------------------- Queue using linked list -------------------------------
 class Queue {
@@ -19,7 +19,7 @@ class Queue {
 
     //--------------------------------------------------------------------
     this.dequeue = () => {
-      let shift = front?.data;
+      let shift = front && front.data;
       if (front) {
         front = front.next;
       }
@@ -43,7 +43,7 @@ class Queue {
   }
 }
 
-module.exports = Queue;
+export default Queue;
 
 //---------------------------------- Test ----------------------------------
 

@@ -1,4 +1,5 @@
-# JS-DS.Algo
-Data Structure && Algorithmd in javascript Language
+# Javascript Language
 
-- Algorithms contain soltuion of some leetcode problems in javascript language
+- Data Structure
+- Pre Defined Algorithms
+- Leet Code Solutions
