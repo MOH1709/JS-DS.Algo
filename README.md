@@ -1,4 +1,4 @@
-# Javascript Language
+# Using Javascript
 
 - Data Structure
 - Pre Defined Algorithms
